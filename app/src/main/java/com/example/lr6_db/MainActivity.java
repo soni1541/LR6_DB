@@ -115,9 +115,8 @@ public class MainActivity extends AppCompatActivity {
 
                 while(!cursor.isAfterLast()){
                     product = new HashMap<>();
-                    product.put("name", cursor.getString(1));
+                    product.put("name_price", cursor.getString(1) + "  " + cursor.getString(3) + " рублей");
                     product.put("description", cursor.getString(2));
-                    product.put("price", cursor.getString(3));
                     products.add(product);
                     cursor.moveToNext();
                 }
@@ -127,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                         getApplicationContext(),
                         products,
                         android.R.layout.simple_list_item_2,
-                        new String[]{"name", "description" + "price"},
+                        new String[]{"name_price", "description"},
                         new int[]{android.R.id.text1, android.R.id.text2});
 
                 listView.setAdapter(adapter);
@@ -146,9 +145,8 @@ public class MainActivity extends AppCompatActivity {
 
                 while(!cursor.isAfterLast()){
                     product = new HashMap<>();
-                    product.put("name", cursor.getString(1));
+                    product.put("name_price", cursor.getString(1) + "  " + cursor.getString(3) + " рублей");
                     product.put("description", cursor.getString(2));
-                    product.put("price", cursor.getString(3));
                     products.add(product);
                     cursor.moveToNext();
                 }
@@ -158,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
                         getApplicationContext(),
                         products,
                         android.R.layout.simple_list_item_2,
-                        new String[]{"name", "description" + "price"},
+                        new String[]{"name_price", "description"},
                         new int[]{android.R.id.text1, android.R.id.text2});
 
                 listView.setAdapter(adapter);
@@ -177,9 +175,8 @@ public class MainActivity extends AppCompatActivity {
 
                 while(!cursor.isAfterLast()){
                     product = new HashMap<>();
-                    product.put("name", cursor.getString(1));
+                    product.put("name_price", cursor.getString(1) + "  " + cursor.getString(3) + " рублей");
                     product.put("description", cursor.getString(2));
-                    product.put("price", cursor.getString(3));
                     products.add(product);
                     cursor.moveToNext();
                 }
@@ -189,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
                         getApplicationContext(),
                         products,
                         android.R.layout.simple_list_item_2,
-                        new String[]{"name", "description" + "price"},
+                        new String[]{"name_price", "description"},
                         new int[]{android.R.id.text1, android.R.id.text2});
 
                 listView.setAdapter(adapter);
