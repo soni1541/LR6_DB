@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button_food"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -27,7 +27,7 @@
             android:text="Еда" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button_clothes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -35,7 +35,7 @@
             android:text="Одежда" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/button_toys"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -44,6 +44,7 @@
     </LinearLayout>
 
     <ListView
+        android:id="@+id/listview1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
