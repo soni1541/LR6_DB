@@ -133,5 +133,36 @@ public class MainActivity extends AppCompatActivity {
                 listView.setAdapter(adapter);
             }
         });
+
+        clothes_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ArrayList<HashMap<String,String>> products = new ArrayList<>();
+                HashMap<String,String> product;
+
+                Cursor cursor = database.rawQuery("SELECT id, name, description, price FROM products WHERE product_category=2", null);
+                cursor.moveToFirst();
+
+
+                while(!cursor.isAfterLast()){
+                    product = new HashMap<>();
+                    product.put("name", cursor.getString(1));
+                    product.put("description", cursor.getString(2));
+                    product.put("price", cursor.getString(3));
+                    products.add(product);
+                    cursor.moveToNext();
+                }
+                cursor.close();
+
+                SimpleAdapter adapter = new SimpleAdapter(
+                        getApplicationContext(),
+                        products,
+                        android.R.layout.simple_list_item_2,
+                        new String[]{"name", "description" + "price"},
+                        new int[]{android.R.id.text1, android.R.id.text2});
+
+                listView.setAdapter(adapter);
+            }
+        });
     }
 }
