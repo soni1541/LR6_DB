@@ -7,51 +7,58 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="407dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="1dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/_dynamic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button_food"
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Казунина Софья Т-403901 ИСиТ"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#8BC34A"
+                android:text="Еда" />
+
+            <Button
+                android:id="@+id/button_clothes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#2196F3"
+                android:text="Одежда" />
+
+            <Button
+                android:id="@+id/button_toys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FF5722"
+                android:text="Игрушки" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listview1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#8BC34A"
-            android:text="Еда" />
-
-        <Button
-            android:id="@+id/button_clothes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#2196F3"
-            android:text="Одежда" />
-
-        <Button
-            android:id="@+id/button_toys"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#FF5722"
-            android:text="Игрушки" />
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp" />
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/listview1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
